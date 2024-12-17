@@ -8,7 +8,7 @@ interface IGameslist {
 
 const GamesList:React.FC<IGameslist> = ({games}) => {
   return (
-    <div>
+    <div style={{display:"flex",gap:"20px",flexWrap:"wrap",justifyContent:"center"}}>
         {games?.map(({id,platform,title}) => (
             <GamesItem key={id} title={title} platform={platform} id={id}/>
         ))}
